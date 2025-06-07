@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
-import 'app/theme/app_theme.dart';
-import 'features/webview/presentation/pages/webview_page.dart';
+import 'core/theme/app_theme.dart';
+import 'features/webview/presentation/webview_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

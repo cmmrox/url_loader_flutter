@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart' as webview;
 import 'package:connectivity_plus/connectivity_plus.dart';
-import '../../domain/webview_controller.dart';
-import '../../data/connectivity_service.dart';
-import '../widgets/offline_view.dart';
-import '../widgets/loading_indicator.dart';
+import '../domain/webview_controller.dart';
+import '../../../core/services/connectivity_service.dart';
+import '../../../core/components/offline_view/offline_view.dart';
+import '../../../core/components/loading_indicator/loading_indicator.dart';
 
 class WebViewPage extends StatefulWidget {
   const WebViewPage({super.key});
