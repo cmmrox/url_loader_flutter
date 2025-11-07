@@ -1,6 +1,5 @@
 class AppConstants {
   static const String appTitle = 'Web App Viewer';
-  static const String baseUrl = 'http://3.110.94.82:3000';
   
   // Error Messages
   static const String noInternetMessage = 'No Internet Connection';

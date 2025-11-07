@@ -1,13 +1,13 @@
 import 'package:webview_flutter/webview_flutter.dart' as webview;
 import 'package:flutter/material.dart';
-import '../../../core/constants/app_constants.dart';
 
 class WebViewController {
   late final webview.WebViewController _controller;
   final ValueNotifier<bool> isLoading = ValueNotifier<bool>(true);
   final ValueNotifier<String?> errorMessage = ValueNotifier<String?>(null);
+  String _currentUrl;
 
-  WebViewController() {
+  WebViewController({required String initialUrl}) : _currentUrl = initialUrl {
     _initController();
   }
 
@@ -33,7 +33,7 @@ class WebViewController {
       ..enableZoom(false)
       ..setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
       ..loadRequest(
-        Uri.parse(AppConstants.baseUrl),
+        Uri.parse(_currentUrl),
         headers: {
           'Cache-Control': 'no-cache',
           'Pragma': 'no-cache',
@@ -45,6 +45,21 @@ class WebViewController {
     errorMessage.value = null;
     _controller.reload();
   }
+
+  void loadUrl(String url) {
+    _currentUrl = url;
+    errorMessage.value = null;
+    isLoading.value = true;
+    _controller.loadRequest(
+      Uri.parse(url),
+      headers: {
+        'Cache-Control': 'no-cache',
+        'Pragma': 'no-cache',
+      },
+    );
+  }
+
+  String get currentUrl => _currentUrl;
 
   webview.WebViewController get controller => _controller;
 } 
