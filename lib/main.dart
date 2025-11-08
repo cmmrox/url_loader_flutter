@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Web App Viewer',
+      title: 'Customer Feedback',
       theme: AppTheme.lightTheme,
       home: const WebViewPage(),
     );

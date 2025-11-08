@@ -1,6 +1,6 @@
 {
-    "name": "flutter_hellowworld",
-    "short_name": "flutter_hellowworld",
+    "name": "Customer Feedback",
+    "short_name": "Customer Feedback",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

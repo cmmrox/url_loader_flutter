@@ -1,5 +1,5 @@
 class AppConstants {
-  static const String appTitle = 'Web App Viewer';
+  static const String appTitle = 'Customer Feedback';
   
   // Error Messages
   static const String noInternetMessage = 'No Internet Connection';
